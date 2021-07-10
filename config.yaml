@@ -1,0 +1,17 @@
+name: Mumble Server
+version: 0.1.0
+slug: mumble_server
+description: >
+  A Mumble server to run alongside home assistant. Allows private voice
+  communication between Mumble clients.
+arch:
+  - amd64
+  - armv7
+url: https://github.com/lzulauf/hassio-addons/tree/main/mumble-server
+startup: service
+boot: auto
+ports:
+  64738/udp: 64738
+ports_description:
+  64738/udp: Mumble server port
+stage: experimental

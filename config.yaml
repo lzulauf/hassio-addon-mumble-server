@@ -8,7 +8,7 @@ arch:
   - amd64
   - armv7
 url: https://github.com/lzulauf/hassio-addons/tree/main/mumble-server
-startup: service
+startup: services
 boot: auto
 ports:
   64738/udp: 64738

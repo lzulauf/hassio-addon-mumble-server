@@ -17,3 +17,9 @@ ports_description:
   64738/tcp: Mumble server connect port
   64738/udp: Mumble server communicate port
 stage: experimental
+options:
+  welcometext: "<br />Welcome to this server running <b>Murmur</b>.<br />Enjoy your stay!<br />"
+  serverpassword: ""
+schema: 
+  welcometext: str
+  serverpassword: str

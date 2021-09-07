@@ -1,11 +1,11 @@
 #!/usr/bin/with-contenv bashio
 
 WELCOMETEXT="$(bashio::config 'welcometext')"
-ESCAPED_WELCOMETEXT = "$(echo ${WELCOMETEXT} | sed \"s/\\\"/\\\\\"/g\")"
+ESCAPED_WELCOMETEXT="$(echo ${WELCOMETEXT} | sed \"s/\\\"/\\\\\"/g\")"
 echo "welcometext=\"${ESCAPED_WELCOMETEXT}\"" >> /config/mumble-server.ini
 
 SERVERPASSWORD="$(bashio::config 'serverpassword')"
-ESCAPED_SERVERPASSWORD = "$(echo ${SERVERPASSWORD} | sed \"s/\\\"/\\\\\"/g\")"
+ESCAPED_SERVERPASSWORD="$(echo ${SERVERPASSWORD} | sed \"s/\\\"/\\\\\"/g\")"
 echo "serverpassword=\"${ESCAPED_SERVERPASSWORD}\"" >> /config/mumble-server.ini
 
 echo "bandwidth=558000" >> /config/mumble-server.ini

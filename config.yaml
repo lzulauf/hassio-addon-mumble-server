@@ -1,5 +1,5 @@
 name: Mumble Server
-version: 0.1.0-beta3
+version: 0.1.0-beta4
 slug: mumble_server
 description: >
   A Mumble server to run alongside home assistant. Allows private voice

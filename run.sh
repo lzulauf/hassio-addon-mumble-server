@@ -8,6 +8,14 @@ SERVERPASSWORD="$(bashio::config 'serverpassword')"
 ESCAPED_SERVERPASSWORD="$(echo ${SERVERPASSWORD} | sed 's/\"/\\\"/g')"
 echo "serverpassword=\"${ESCAPED_SERVERPASSWORD}\"" >> /config/mumble-server.ini
 
+CERTFILE="$(bashio::config 'certfile')"
+ESCAPED_CERTFILE="$(echo ${CERTFILE} | sed 's/\"/\\\"/g')"
+echo "sslCert=\"${ESCAPED_CERTFILE}\"" >> /config/mumble-server.ini
+
+KEYFILE="$(bashio::config 'keyfile')"
+ESCAPED_KEYFILE="$(echo ${KEYFILE} | sed 's/\"/\\\"/g')"
+echo "sslKey=\"${ESCAPED_KEYFILE}\"" >> /config/mumble-server.ini
+
 echo "bandwidth=558000" >> /config/mumble-server.ini
 echo "users=10" >> /config/mumble-server.ini
 echo "messageburst=5" >> /config/mumble-server.ini

@@ -1,5 +1,5 @@
 name: Mumble Server
-version: 0.1.0-beta7
+version: 0.1.0-beta8
 slug: mumble_server
 description: >
   A Mumble server to run alongside home assistant. Allows private voice
@@ -16,6 +16,8 @@ ports:
 ports_description:
   64738/tcp: Mumble server connect port
   64738/udp: Mumble server communicate port
+map:
+  - ssl
 stage: experimental
 options:
   welcometext: "<br />Welcome to this server running <b>Murmur</b>.<br />Enjoy your stay!<br />"

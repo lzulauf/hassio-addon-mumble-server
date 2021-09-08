@@ -20,6 +20,10 @@ stage: experimental
 options:
   welcometext: "<br />Welcome to this server running <b>Murmur</b>.<br />Enjoy your stay!<br />"
   serverpassword: ""
+  certfile: "fullchain.pem"
+  keyfile: "privkey.pem"
 schema: 
   welcometext: str
   serverpassword: str
+  certfile: str
+  keyfile: str

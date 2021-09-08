@@ -7,11 +7,25 @@ description: >
 arch:
   - amd64
   - armv7
-url: https://github.com/lzulauf/hassio-addons/tree/main/mumble-server
+url: https://github.com/lzulauf/hassio-addon-mumble-server
 startup: services
 boot: auto
 ports:
+  64738/tcp: 64738
   64738/udp: 64738
 ports_description:
-  64738/udp: Mumble server port
+  64738/tcp: Mumble server connect port
+  64738/udp: Mumble server communicate port
+map:
+  - ssl
 stage: experimental
+options:
+  welcometext: "<br />Welcome to this server running <b>Murmur</b>.<br />Enjoy your stay!<br />"
+  serverpassword: ""
+  certfile: "/ssl/fullchain.pem"
+  keyfile: "/ssl/privkey.pem"
+schema: 
+  welcometext: str
+  serverpassword: str
+  certfile: str
+  keyfile: str

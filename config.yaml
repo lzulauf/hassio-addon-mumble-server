@@ -1,5 +1,5 @@
 name: Mumble Server
-version: 0.1.0-beta8
+version: 0.1.0-beta9
 slug: mumble_server
 description: >
   A Mumble server to run alongside home assistant. Allows private voice
@@ -22,8 +22,8 @@ stage: experimental
 options:
   welcometext: "<br />Welcome to this server running <b>Murmur</b>.<br />Enjoy your stay!<br />"
   serverpassword: ""
-  certfile: "fullchain.pem"
-  keyfile: "privkey.pem"
+  certfile: "/ssl/fullchain.pem"
+  keyfile: "/ssl/privkey.pem"
 schema: 
   welcometext: str
   serverpassword: str
